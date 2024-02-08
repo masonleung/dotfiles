@@ -11,6 +11,8 @@ alias gm='git commit -n -m'
 alias gca='git commit --amend'
 alias grc='git rebase --continue' 
 
+git config --global --replace-all core.pager "less -F -X"
+
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
