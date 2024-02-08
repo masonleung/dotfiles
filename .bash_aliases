@@ -1,3 +1,14 @@
+##############
+# git command
+##############
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias k="kubectl"
+alias kx="kubectx"
+
+##############
+# git command
+##############
 alias gco='git checkout'
 alias gpr='git pull --rebase origin main'
 alias gcb='git checkout -b'
@@ -11,6 +22,9 @@ alias gm='git commit -n -m'
 alias gca='git commit --amend'
 alias grc='git rebase --continue' 
 
+##############
+# git config
+##############
 git config --global --replace-all core.pager "less -F -X"
 
 parse_git_branch() {
