@@ -1,0 +1,13 @@
+alias gco='git checkout'
+alias gpr='git pull --rebase origin main'
+alias gcb='git checkout -b'
+alias gbd='git branch -D'
+alias gl='git log'
+alias gs='git status'
+alias ga.='git add .'
+alias ga='git add'
+alias gpo='git push origin --no-verify'
+alias gm='git commit -n -m'
+alias gca='git commit --amend'
+alias grc='git rebase --continue' 
+
