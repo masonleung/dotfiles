@@ -1,8 +1,12 @@
 ##############
-# git command
+# linux command
 ##############
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+
+##############
+# k8s command
+##############
 alias k="kubectl"
 alias kx="kubectx"
 
@@ -26,6 +30,9 @@ alias grc='git rebase --continue'
 # git config
 ##############
 git config --global --replace-all core.pager "less -F -X"
+git config --global diff.tool vimdiff
+git config --global difftool.prompt false
+git config --global alias.d difftool
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
