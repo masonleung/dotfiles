@@ -38,3 +38,21 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
+
+
+##############
+# helpers
+##############
+mkdir -p "${HOME}/.history/$(date -u +%Y/%m/)"
+export PROMPT_COMMAND='history -a'
+HISTFILE="${HOME}/.history/$(date -u +%Y/%m/%d.%H.%M.%S)_T$$"
+
+#null out history and history file size so that we're guanranteed to retain everything
+HISTSIZE=200
+HISTFILESIZE=200
+
+#Searches through our heirarchal history schema as well as current shell history
+histgrep () {
+    grep -ir "$@" ~/.history
+    history | grep -i "$@"
+}
