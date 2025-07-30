@@ -24,7 +24,7 @@ alias ga='git add'
 alias gpo='git push origin --no-verify'
 alias gm='git commit -n -m'
 alias gca='git commit --amend'
-alias grc='git rebase --continue' 
+alias grc='git rebase --continue'
 
 ##############
 # git config
@@ -39,6 +39,8 @@ parse_git_branch() {
 }
 export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
 
+
+alias epochts="date +%s"
 
 ##############
 # helpers
